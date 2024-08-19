@@ -14,6 +14,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to connect to the Ethereum client: %v", err)
 	}
+	defer client.Close()
 
 	// Print confirmation of the connection
 	fmt.Println("Connected to Ethereum network")
